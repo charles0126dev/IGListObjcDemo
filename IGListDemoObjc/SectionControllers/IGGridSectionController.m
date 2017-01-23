@@ -16,6 +16,16 @@
 
 @implementation IGGridSectionController
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.minimumLineSpacing = 1;
+        self.minimumInteritemSpacing = 1;
+    }
+    return self;
+}
+
 #pragma mark - IGListSectionType
 
 - (NSInteger)numberOfItems {
