@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface IGDetailLabelCell : UICollectionViewCell
-
+@property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UILabel *detailLabel;
 @end

@@ -7,31 +7,93 @@
 //
 
 #import "IGNestedAdapterViewController.h"
+#import <IGListKit.h>
+#import "IGHorizontalSectionController.h"
+#import "IGLabelSectionController.h"
 
-@interface IGNestedAdapterViewController ()
-
+@interface IGNestedAdapterViewController () <IGListAdapterDataSource>
+@property (nonatomic, strong) IGListCollectionView *collectionView;
+@property (nonatomic, strong) IGListAdapter *adapter;
+@property (nonatomic, strong) NSArray *data;
 @end
 
 @implementation IGNestedAdapterViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self setupUI];
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    self.collectionView.frame = self.view.bounds;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - setupUI
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)setupUI {
+    
+    [self.view addSubview:self.collectionView];
+    
+    self.adapter.collectionView = self.collectionView;
+    self.adapter.dataSource = self;
 }
-*/
+
+#pragma mark - IGListAdapterDataSource
+
+- (NSArray<id<IGListDiffable>> *)objectsForListAdapter:(IGListAdapter *)listAdapter {
+    return self.data;
+}
+
+- (IGListSectionController<IGListSectionType> *)listAdapter:(IGListAdapter *)listAdapter sectionControllerForObject:(id)object {
+    if ([object isKindOfClass:[NSNumber class]]) {
+        return [[IGHorizontalSectionController alloc] init];
+    } else {
+        return [[IGLabelSectionController alloc] init];
+    }
+}
+
+- (UIView *)emptyViewForListAdapter:(IGListAdapter *)listAdapter {
+    return nil;
+}
+
+#pragma mark - Custom Accessors
+
+- (IGListAdapter *)adapter {
+    if (!_adapter) {
+        _adapter = [[IGListAdapter alloc] initWithUpdater:[[IGListAdapterUpdater alloc] init]
+                                           viewController:self
+                                         workingRangeSize:0];
+    }
+    return _adapter;
+}
+
+- (IGListCollectionView *)collectionView {
+    if (!_collectionView) {
+        UICollectionViewLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+        _collectionView = [[IGListCollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
+    }
+    return _collectionView;
+}
+
+- (NSArray *)data {
+    if (!_data) {
+        _data = @[
+                  @"Ridiculus Elit Tellus Purus Aenean",
+                  @"Condimentum Sollicitudin Adipiscing",
+                  @(14),
+                  @"Ligula Ipsum Tristique Parturient Euismod",
+                  @"Purus Dapibus Vulputate",
+                  @(6),
+                  @"Tellus Nibh Ipsum Inceptos",
+                  @(2)
+                  ];
+    }
+    return _data;
+}
 
 @end

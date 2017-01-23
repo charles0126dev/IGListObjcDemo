@@ -35,6 +35,8 @@
 		564EE3271E335402002648D0 /* IGNestedAdapterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 564EE3261E335402002648D0 /* IGNestedAdapterViewController.m */; };
 		564EE32A1E33540C002648D0 /* IGEmptyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 564EE3291E33540C002648D0 /* IGEmptyViewController.m */; };
 		564EE32D1E33570B002648D0 /* IGDemoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 564EE32C1E33570B002648D0 /* IGDemoItem.m */; };
+		569D6AF21E35A95000EB7AC8 /* IGGridItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 569D6AF11E35A95000EB7AC8 /* IGGridItem.m */; };
+		569D6AF51E35A95600EB7AC8 /* IGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 569D6AF41E35A95600EB7AC8 /* IGUser.m */; };
 		FAA07FDC277313C587C93A6D /* libPods-IGListDemoObjc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 400BD1937B87EEC52DA33CBD /* libPods-IGListDemoObjc.a */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +97,10 @@
 		564EE3291E33540C002648D0 /* IGEmptyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGEmptyViewController.m; sourceTree = "<group>"; };
 		564EE32B1E33570B002648D0 /* IGDemoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGDemoItem.h; sourceTree = "<group>"; };
 		564EE32C1E33570B002648D0 /* IGDemoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGDemoItem.m; sourceTree = "<group>"; };
+		569D6AF01E35A95000EB7AC8 /* IGGridItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGGridItem.h; sourceTree = "<group>"; };
+		569D6AF11E35A95000EB7AC8 /* IGGridItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGGridItem.m; sourceTree = "<group>"; };
+		569D6AF31E35A95600EB7AC8 /* IGUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGUser.h; sourceTree = "<group>"; };
+		569D6AF41E35A95600EB7AC8 /* IGUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGUser.m; sourceTree = "<group>"; };
 		EB8D08363BDD0A17688AAD96 /* Pods-IGListDemoObjc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IGListDemoObjc.release.xcconfig"; path = "Pods/Target Support Files/Pods-IGListDemoObjc/Pods-IGListDemoObjc.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -224,6 +230,10 @@
 			children = (
 				564EE32B1E33570B002648D0 /* IGDemoItem.h */,
 				564EE32C1E33570B002648D0 /* IGDemoItem.m */,
+				569D6AF01E35A95000EB7AC8 /* IGGridItem.h */,
+				569D6AF11E35A95000EB7AC8 /* IGGridItem.m */,
+				569D6AF31E35A95600EB7AC8 /* IGUser.h */,
+				569D6AF41E35A95600EB7AC8 /* IGUser.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -385,6 +395,8 @@
 				564EE31B1E3353C5002648D0 /* IGRemoveCell.m in Sources */,
 				564EE3271E335402002648D0 /* IGNestedAdapterViewController.m in Sources */,
 				564EE2E51E335286002648D0 /* IGDemosViewController.m in Sources */,
+				569D6AF51E35A95600EB7AC8 /* IGUser.m in Sources */,
+				569D6AF21E35A95000EB7AC8 /* IGGridItem.m in Sources */,
 				564EE2EB1E3352C5002648D0 /* IGLabelSectionController.m in Sources */,
 				564EE32A1E33540C002648D0 /* IGEmptyViewController.m in Sources */,
 				564EE2E81E3352AF002648D0 /* IGDemoSectionController.m in Sources */,

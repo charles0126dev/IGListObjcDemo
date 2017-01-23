@@ -11,7 +11,6 @@
 @interface IGLabelCell ()
 @property (nonatomic, assign) UIEdgeInsets insets;
 @property (nonatomic, strong) UIFont *font;
-@property (nonatomic, assign) CGFloat singleLineHeight;
 @property (nonatomic, strong) CALayer *separator;
 @end
 
@@ -51,7 +50,7 @@
 
 #pragma mark - Public
 
-- (CGFloat)textHeightWithText:(NSString *)text width:(CGFloat)width {
++ (CGFloat)textHeightWithText:(NSString *)text width:(CGFloat)width {
     return 0;
 }
 

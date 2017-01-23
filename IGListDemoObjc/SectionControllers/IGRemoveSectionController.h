@@ -8,6 +8,14 @@
 
 #import <IGListKit/IGListKit.h>
 
-@interface IGRemoveSectionController : IGListSectionController
+@class IGRemoveSectionController;
 
+@protocol IGRemoveSectionControllerDelegate <NSObject>
+
+- (void)removeSectionControllerwantsRemove:(IGRemoveSectionController *)removeSectionControlller;
+
+@end
+
+@interface IGRemoveSectionController : IGListSectionController <IGListSectionType>
+@property (nonatomic, weak) id<IGRemoveSectionControllerDelegate> delegate;
 @end

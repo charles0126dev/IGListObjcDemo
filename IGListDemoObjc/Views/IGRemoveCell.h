@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IGRemoveCell : UICollectionViewCell
+@class IGRemoveCell;
 
+@protocol IGRemoveCellDelegate <NSObject>
+
+- (void)removeCellDidTapButton:(IGRemoveCell *)removeCell;
+
+@end
+
+@interface IGRemoveCell : UICollectionViewCell
+@property (nonatomic, weak) id<IGRemoveCellDelegate> delegate;
+@property (nonatomic, strong) UILabel *label;
 @end

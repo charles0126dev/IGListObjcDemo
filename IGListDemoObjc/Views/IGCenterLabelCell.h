@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface IGCenterLabelCell : UICollectionViewCell
-
+@property (nonatomic, strong) UILabel *label;
 @end

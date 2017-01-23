@@ -8,6 +8,6 @@
 
 #import <IGListKit/IGListKit.h>
 
-@interface IGExpandableSectionController : IGListSectionController
+@interface IGExpandableSectionController : IGListSectionController <IGListSectionType>
 
 @end

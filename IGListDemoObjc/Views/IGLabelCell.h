@@ -10,5 +10,6 @@
 
 @interface IGLabelCell : UICollectionViewCell
 @property (nonatomic, strong) UILabel *label;
+@property (nonatomic, assign) CGFloat singleLineHeight;
 - (CGFloat)textHeightWithText:(NSString *)text width:(CGFloat)width;
 @end

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IGEmbeddedCollectionViewCell : UICollectionViewCell
+@class IGListCollectionView;
 
+@interface IGEmbeddedCollectionViewCell : UICollectionViewCell
+@property (nonatomic, strong) IGListCollectionView *collectionView;
 @end

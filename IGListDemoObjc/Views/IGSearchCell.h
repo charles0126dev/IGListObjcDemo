@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface IGSearchCell : UICollectionViewCell
-
+@property (nonatomic, strong) UISearchBar *searchBar;
 @end

@@ -8,6 +8,6 @@
 
 #import <IGListKit/IGListKit.h>
 
-@interface IGLabelSectionController : IGListSectionController
-
+@interface IGLabelSectionController : IGListSectionController <IGListSectionType>
+@property (nonatomic, copy) NSString *object;
 @end

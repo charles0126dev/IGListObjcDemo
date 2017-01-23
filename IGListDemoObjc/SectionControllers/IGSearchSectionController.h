@@ -8,6 +8,14 @@
 
 #import <IGListKit/IGListKit.h>
 
-@interface IGSearchSectionController : IGListSectionController
+@class IGSearchSectionController;
 
+@protocol IGSearchSectionControllerDelegate <NSObject>
+
+- (void)searchSectionController:(IGSearchSectionController *)searchSectionController didChangeText:(NSString *)text;
+
+@end
+
+@interface IGSearchSectionController : IGListSectionController <IGListSectionType>
+@property (nonatomic, weak) id<IGSearchSectionControllerDelegate> delegate;
 @end
